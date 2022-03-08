@@ -16,6 +16,11 @@
 -- -- Mediante el uso de transacciones, realiza las consultas correspondientes para este
 -- -- requerimiento y luego consulta la tabla producto para validar si fue efectivamente descontado en el stock
 
+-- -- ***** recordar tener desactivado el autocommit en tu base de datos
+\set AUTOCOMMIT off
+\echo :AUTOCOMMIT
+off    
+
 BEGIN TRANSACTION;
 INSERT INTO compra (id,cliente_id,fecha)
 VALUES (33,1,'07-03-2022');
@@ -112,8 +117,8 @@ COMMIT;
 ---- f. Habilitar de nuevo el AUTOCOMMIT
 
 \set AUTOCOMMIT on 
-\echo :AUTOCMMIT
-:AUTOCMMIT
+ \echo :AUTOCOMMIT
+on
 
 
 
