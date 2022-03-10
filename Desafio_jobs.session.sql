@@ -81,6 +81,7 @@ SELECT*FROM producto
 WHERE id=8;
 
 ROLLBACK TO SAVEPOINT b;
+COMMIT;
 
 
 -- -- --- - ***********************************
